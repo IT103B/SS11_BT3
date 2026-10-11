@@ -58,12 +58,13 @@ const comparison = [
   },
 ];
 
+// Function Declaration được hoist, vì vậy có thể gọi trước dòng khai báo.
+console.log(declarationHoistingExample());
+console.table(comparison);
+
 function declarationHoistingExample() {
   return "Function Declaration gọi được trước khi định nghĩa.";
 }
-
-console.log(declarationHoistingExample());
-console.table(comparison);
 
 const functionExpressionExample = function () {
   return "Function Expression cần khởi tạo trước khi gọi.";
